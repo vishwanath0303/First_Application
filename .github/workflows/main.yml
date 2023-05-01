@@ -24,4 +24,4 @@ jobs:
             password: ${{ secrets.DOCKER_PASSWORD }}
        - name: Docker Build and run
          run: |
-            docker build  vishwanath0303/onlinebookstore
+            docker build -t vishwanath0303/onlinebookstore .
