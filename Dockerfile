@@ -1,5 +1,5 @@
 FROM openjdk:8
 WORKDIR /
 EXPOSE 8000
-COPY ./onlinebookstore.jar onlinebookstore.jar
+COPY ./target/dependency/webapp-runner.jar webapp-runner.jar
 CMD java -jar onlinebookstore.jar
