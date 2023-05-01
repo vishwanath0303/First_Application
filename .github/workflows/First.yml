@@ -1,8 +1,10 @@
 name: CI First
 
 on:
+  push:
+    branches: ["master"]
   workflow_dispatch:
-    inputs: 
+    inputs:
       image_name:
       type: string
       default: 'vishwa'
