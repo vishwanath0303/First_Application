@@ -26,4 +26,4 @@ jobs:
        - name: Docker Build and run
          run: |
             docker build -t vishwanath0303/onlinebookstore .
-            docker push vishwanath0303/onlinebookstore
+            docker push vkulkarni0303/1sa
