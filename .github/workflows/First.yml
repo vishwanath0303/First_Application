@@ -39,10 +39,10 @@ jobs:
         run: mvn --batch-mode --update-snapshots package  
 
       # Runs a single command using the runners shell
-      - name:  Docker Build and run
-        run:  |
-          docker build . -t vishwanath0303/onlinebookstore
-          docker run -dit -p 8000:8000 vishwanath0303/onlinebookstore
+#      - name:  Docker Build and run
+#        run:  |
+#           docker build  vishwanath0303/onlinebookstore
+      #    docker run -dit -p 8000:8000 vishwanath0303/onlinebookstore
           
       - name: Login to Dockerhub
         uses: Docker/login-action@v2
@@ -50,13 +50,11 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
           
-      - name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-  
-          push: true
-          tags: vishwanath0303/onlinebookstore:latest
-          
+      - name: Build and  docker image
+        run : |
+          docker build -t  vishwanath0303/onlinebookstore:v1 .
+          docker run -dit 8000:8000 vishwanath0303/onlinebookstore
+           
        
         
           
