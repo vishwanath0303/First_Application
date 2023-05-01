@@ -1,0 +1,15 @@
+name: main
+on:
+  workflow_dispatch:
+    inputs:
+      image_name:
+      type: string
+      default: 'vishwa'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Test run
+      run: |
+        echo "Hello Main"
+        echo "${{ github.event.inputs.image_name}}"
