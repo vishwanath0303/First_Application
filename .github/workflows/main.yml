@@ -2,7 +2,8 @@ name: CI First
 
 on:
   push:
-    branches: [ "master" ]
+    branches: 
+     - master
     # inputs:
     #   image_name:
     #   type: string
