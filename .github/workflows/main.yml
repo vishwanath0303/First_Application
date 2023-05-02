@@ -27,4 +27,4 @@ jobs:
          run: |
             docker build -t vishwanath0303/onlinebookstore .
             docker images -a
-            docker push vishwanath0303/onlinebookstore:latest
+            docker push vkulkarni0303/vishwanath0303/onlinebookstore:latest
