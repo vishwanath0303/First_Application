@@ -26,7 +26,5 @@ jobs:
        - name: Docker Build and run
          run: |
             docker build -t vishwanath0303/onlinebookstore .
-           # docker push vkulkarni0303/1sa
-
-       - name: Docker Push
-         run: docker push vishwanath0303/onlinebookstore
+            docker login -u "username" -p "password" docker.io
+            docker push vishwanath0303/onlinebookstore:latest
