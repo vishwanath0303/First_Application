@@ -25,6 +25,6 @@ jobs:
             password: ${{ secrets.DOCKER_PASSWORD }}
        - name: Docker Build and run
          run: |
-            docker build -t vishwanath0303/onlinebookstore .
+            docker build -t vkulkarni0303/onlinebookstore .
             docker images -a
-            docker push vkulkarni0303/vishwanath0303/onlinebookstore:latest
+            docker push vkulkarni0303/onlinebookstore:latest
