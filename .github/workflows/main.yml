@@ -27,3 +27,6 @@ jobs:
          run: |
             docker build -t vishwanath0303/onlinebookstore .
            # docker push vkulkarni0303/1sa
+
+       - name: Docker Push
+         run: docker push vishwanath0303/onlinebookstore
