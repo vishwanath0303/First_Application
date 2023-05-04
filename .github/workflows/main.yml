@@ -1,9 +1,10 @@
 name: CI val
 
 on:
-  repository_dispatch:
-  schedule:
-    - cron: '5 12 * * 0'
+  workflow_dispatch:
+  push:
+    branches: 
+      - master
 jobs:
   build:
     runs-on: ubuntu-latest
