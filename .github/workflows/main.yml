@@ -1,14 +1,13 @@
 name: CI val
 
 on:
- # repository_dispatch:
-#    types: do-something
+  workflow_dispatch:
   push:
     branches: 
       - master
 jobs:
   build:
-    runs-on: runner
+    runs-on: ubuntu-latest
     steps:
        - uses: actions/checkout@v2
        - name: Set up JDK 17
